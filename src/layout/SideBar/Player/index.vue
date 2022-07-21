@@ -1,7 +1,7 @@
 <template>
 	<v-container @mousewheel='mouseWheel' class='pa-0 overflow-hidden' fluid style='position: relative; height: 100vh; min-width: 900px'>
 		<!-- 背景 -->
-		<v-img :src='music.picUrl' :style='`filter: blur(${blur}px)`' class='bg'></v-img>
+		<v-img :src='music.picUrl' :style='`filter: blur(${blur}px)`' class='player-bg'></v-img>
 		<!-- 内容 -->
 		<v-card color='transparent' elevation='0' height='100%' style='backdrop-filter: brightness(70%)'>
 			<!-- 左上播放列表按键 -->
@@ -55,9 +55,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.bg {
+.player-bg {
   width: 100%;
   height: 100%;
   position: absolute;
+  transform: scale(1.2);
 }
 </style>
